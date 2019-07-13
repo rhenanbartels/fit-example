@@ -6,7 +6,9 @@ y = np.loadtxt('y.txt')
 
 
 # best fit to this data was
-# y = a - (b*X) - arctan(c/(X-d)) 
+# y = a - (b*X) - arctan(c/(X-d))
+# see fit_derivative.png  and
+# fit_deriv_error.png
 for i in range(len(x)):
     if i == 0:
         x1 = x[i]

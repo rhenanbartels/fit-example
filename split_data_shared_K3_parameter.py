@@ -11,7 +11,11 @@ y = np.loadtxt('y.txt')
 allX = x
 allY = y
 
-splitN = 10
+# The lower part of the split will contain the
+# first 'splitN" data points, all other data
+# points will go into the high part of the split.
+splitN = 20
+
 # calculate the overlapping split fraction of data
 # split off the overlapping data segments for y
 yLow = y[:splitN]

@@ -1,0 +1,28 @@
+
+1) the file split_data_shared_K3_parameter.py
+will split the data into two sections and use
+a shared K3 parameter in simultanois fits of
+the two sections.
+
+2) The file derivative_extractor.py will calculate
+a dy/dx empirical derivative value for each
+data point for use in analysis. This data was
+fit to the empirically determined equation
+Y = a - (b*X) - arctan(c/(X-d)) where Y
+is the derivative at a given value o f M.
+Included are the image files  fit_derivative.png
+(the fitted derivative) and fit_deriv_error.png
+(the errors of that fit). This allows a relatively
+accurate rate-of-change to be easily calculated for
+any given value of M.
+
+3) The file genetic_algorithm_estimator.py uses scipy's
+standard differential_evolution genetic algorithm module
+to estimate initial parameter values for the equation
+
+y = K1 * np.exp(-K2 * xdata) + K3 * np.exp(-K4 * xdata)
+
+That scipy module uses the Latin Hypercube algorithm to
+ensure a thorough search of parameter space, requiring
+bounds within which to search. It is much easier to give
+ranges for the initial parameter estimates than specific values.
